@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Code Editor</title>
+  <link rel="stylesheet" href="editor.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Header -->
+    <header>
+      <h1>Code Editor</h1>
+      <div class="controls">
+        <button id="theme-toggle">🌙</button>
+        <button id="export-btn">Export</button>
+      </div>
+    </header>
+
+    <!-- Editor Panels -->
+    <div class="panels">
+      <div class="editor-panel" id="html-editor">
+        <h2>HTML</h2>
+        <div id="html-code" class="code-editor"></div>
+      </div>
+      <div class="editor-panel" id="css-editor">
+        <h2>CSS</h2>
+        <div id="css-code" class="code-editor"></div>
+      </div>
+      <div class="editor-panel" id="js-editor">
+        <h2>JavaScript</h2>
+        <div id="js-code" class="code-editor"></div>
+      </div>
+    </div>
+
+    <!-- Preview and Console -->
+    <div class="preview-console">
+      <div class="preview-pane">
+        <h2>Preview</h2>
+        <iframe id="preview-frame"></iframe>
+      </div>
+      <div class="console-pane">
+        <h2>Console</h2>
+        <pre id="console-output"></pre>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ace Editor Script -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js"></script>
+  <script src="editor.js"></script>
+</body>
+</html>
